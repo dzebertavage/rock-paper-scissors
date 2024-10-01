@@ -9,7 +9,23 @@ function getComputerChoice () {
     }
 }
 
+function getUserChoice() {
+    let userChoice = prompt("Type choice: rock, paper, or scissors");
+    userChoice = userChoice.toLowerCase();
+    userChoice = userChoice.replace(/ /g, "");
+    if (userChoice === "rock") {
+        return "Rock";
+    } else if (userChoice === "paper") {
+        return "Paper";
+    } else if (userChoice === "scissors") {
+        return "Scissors";
+    } else {
+        return "Error, incorrect choice."
+    }
+}
+
 let computerChoice = getComputerChoice();
+let userChoice = getUserChoice();
 
 
 
