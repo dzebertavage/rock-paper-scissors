@@ -59,14 +59,21 @@ function playRound() {
     }
 }
 
+function playGame() {
+    for (let i = 1; i < 6; i++) {
+        console.log("Round " + i);
+        playRound();
+        console.log("You: " + humanScore + " — " + "Computer: " + computerScore);
+        console.log("");
+    }
+}
+
 let humanScore = 0;
 let computerScore = 0;
 let computerChoice;
 let humanChoice;
 
-playRound();
-console.log(humanScore);
-console.log(computerScore);
+playGame();
 
 
 
